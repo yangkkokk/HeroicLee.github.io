@@ -242,10 +242,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="HeroicLee.github.io/2018/01/02/Smtp模块/">
+    <link itemprop="mainEntityOfPage" href="HeroicLee.github.io/2018/01/02/smtplib模块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="年轻渔夫">
+      <meta itemprop="name" content="渔夫">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -261,7 +261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/02/Smtp模块/" itemprop="url">Smtp模块</a></h1>
+                <a class="post-title-link" href="/2018/01/02/smtplib模块/" itemprop="url">smtplib模块</a></h1>
         
 
         <div class="post-meta">
@@ -335,7 +335,19 @@
       
         
           
-            
+            <h2 id="smtplib模块"><a href="#smtplib模块" class="headerlink" title="smtplib模块"></a>smtplib模块</h2><blockquote>
+<p>smtplib为Python在3.x版本中标准库的内容, 我们不需要额外安装;<br>使用该模块, 可以让我们更加轻松的实现模拟邮件客户端发送邮件等功能;</p>
+</blockquote>
+<h2 id="smtplib常用方法"><a href="#smtplib常用方法" class="headerlink" title="smtplib常用方法"></a>smtplib常用方法</h2><p>首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line">c_smtp = smtplib.SMTP()<span class="comment">#创建SMTP对象</span></span><br></pre></td></tr></table></figure></p>
+<p>接着我们可以使用实例函数connect与远程邮件服务器进行连接, 从而实现投递信件<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connect(self, host=<span class="string">'localhost'</span>, port=<span class="number">0</span>, source_address=<span class="keyword">None</span>)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>host : 对应邮箱主机地址, 如</li>
+<li>port :</li>
+<li>local_hostname :</li>
+<li>timeout :</li>
+<li>source_address :</li>
+</ul>
+
           
         
       
@@ -405,7 +417,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">年轻渔夫</p>
+              <p class="site-author-name" itemprop="name">渔夫</p>
               <p class="site-description motion-element" itemprop="description">什么都帮不了你，除了你自己</p>
           </div>
 
@@ -479,7 +491,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">年轻渔夫</span>
+  <span class="author" itemprop="copyrightHolder">渔夫</span>
 
   
 </div>
