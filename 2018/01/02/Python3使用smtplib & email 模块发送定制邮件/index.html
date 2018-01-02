@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="MIME使邮件丰富多彩邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)在Python中, 扩展模块为  smtplib常用方法首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象12import smtplibc_smtp = s">
+<meta name="description" content="MIME使邮件丰富多彩邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)在Python中, 对于MIME支持的扩展模块为:email  email模块所支持的MIME常用格式email.mime.text.MIMEText :  MIME文本对象 email">
 <meta name="keywords" content="Python3.x,smtplib,邮件,运维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3使用smtplib &amp; email 模块发送定制邮件">
 <meta property="og:url" content="HeroicLee.github.io/2018/01/02/Python3使用smtplib & email 模块发送定制邮件/index.html">
 <meta property="og:site_name" content="你好, 旅行者">
-<meta property="og:description" content="MIME使邮件丰富多彩邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)在Python中, 扩展模块为  smtplib常用方法首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象12import smtplibc_smtp = s">
+<meta property="og:description" content="MIME使邮件丰富多彩邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)在Python中, 对于MIME支持的扩展模块为:email  email模块所支持的MIME常用格式email.mime.text.MIMEText :  MIME文本对象 email">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-02T10:11:44.591Z">
+<meta property="og:updated_time" content="2018-01-02T11:31:13.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3使用smtplib &amp; email 模块发送定制邮件">
-<meta name="twitter:description" content="MIME使邮件丰富多彩邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)在Python中, 扩展模块为  smtplib常用方法首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象12import smtplibc_smtp = s">
+<meta name="twitter:description" content="MIME使邮件丰富多彩邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)在Python中, 对于MIME支持的扩展模块为:email  email模块所支持的MIME常用格式email.mime.text.MIMEText :  MIME文本对象 email">
 
 
 
@@ -342,10 +342,21 @@
       
 
       
-        <h2 id="MIME使邮件丰富多彩"><a href="#MIME使邮件丰富多彩" class="headerlink" title="MIME使邮件丰富多彩"></a>MIME使邮件丰富多彩</h2><p>邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源<br>这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)<br>在Python中, 扩展模块为</p>
+        <h2 id="MIME使邮件丰富多彩"><a href="#MIME使邮件丰富多彩" class="headerlink" title="MIME使邮件丰富多彩"></a>MIME使邮件丰富多彩</h2><p>邮件不光可以支持纯文本信息, 还可以添加Html, 图像, 声音等资源<br>这里将使用MIME(Multipurpose Internet Mail Extensions;多用途互联网邮件扩展类型)<br>在Python中, 对于MIME支持的扩展模块为:email</p>
 <hr>
-<h2 id="smtplib常用方法"><a href="#smtplib常用方法" class="headerlink" title="smtplib常用方法"></a>smtplib常用方法</h2><p>首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line">c_smtp = smtplib.SMTP()<span class="comment">#创建SMTP对象</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="email模块所支持的MIME常用格式"><a href="#email模块所支持的MIME常用格式" class="headerlink" title="email模块所支持的MIME常用格式"></a>email模块所支持的MIME常用格式</h2><p><font color="#6495ED">email.mime.text.<strong>MIMEText</strong> </font>:  MIME文本对象</p>
+<p><font color="#6495ED">email.mime.image.<strong>MIMEImage</strong> </font>: MIME图片数据对象</p>
+<p><font color="#6495ED">email.mime.audio.<strong>MIMEAudio</strong> </font>: MIME音频对象</p>
+<p><font color="#6495ED">email.mime.multipart.<strong>MIMEMultipart</strong> </font>: 包含多个部分的邮件体对象, 可使用该对象为邮件添加附件, 或内嵌资源</p>
 <hr>
+<h2 id="MIMEText"><a href="#MIMEText" class="headerlink" title="MIMEText"></a>MIMEText</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">email.mime.text.MIMEText(_text, _subtype=<span class="string">'plain'</span>, _charset=<span class="keyword">None</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><font color="#6495ED">_text </font>: 消息字符串</li>
+<li><font color="#6495ED">_subtype </font>: 指定文本类型, 默认为普通文本类型(text/plain)</li>
+<li><font color="#6495ED">_charset </font>: 将在Content-Type header添加的字符编码</li>
+</ul>
+<p>支持HTML邮件代码:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">  @2018-渔夫</span></span><br><span class="line"><span class="string">  heroiclee.github.io</span></span><br><span class="line"><span class="string">  All Rights Reversed</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">host = <span class="string">'smtp.163.com'</span><span class="comment">#邮件服务器主机地址</span></span><br><span class="line">port = <span class="string">'25'</span><span class="comment">#主机端口</span></span><br><span class="line"></span><br><span class="line">user = <span class="string">'example@163.com'</span><span class="comment">#邮件服务器用户名</span></span><br><span class="line">password = <span class="string">'passwd'</span><span class="comment">#邮件服务器客户端授权密码</span></span><br><span class="line"></span><br><span class="line">from_addr = <span class="string">'example@163.com'</span><span class="comment">#发件人</span></span><br><span class="line">to_addrs = [<span class="string">'to@qq.com'</span>]<span class="comment">#收件人</span></span><br></pre></td></tr></table></figure></p>
+<p>未完持续…</p>
 <hr>
 <p>转载请注明原文地址</p>
 
@@ -524,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MIME使邮件丰富多彩"><span class="nav-number">1.</span> <span class="nav-text">MIME使邮件丰富多彩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#smtplib常用方法"><span class="nav-number">2.</span> <span class="nav-text">smtplib常用方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MIME使邮件丰富多彩"><span class="nav-number">1.</span> <span class="nav-text">MIME使邮件丰富多彩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#email模块所支持的MIME常用格式"><span class="nav-number">2.</span> <span class="nav-text">email模块所支持的MIME常用格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MIMEText"><span class="nav-number">3.</span> <span class="nav-text">MIMEText</span></a></li></ol></div>
             
 
           </div>
