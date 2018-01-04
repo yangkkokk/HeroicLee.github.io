@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="什么都帮不了你，除了你自己">
+<meta name="description" content="输出 print 函数直接输出字符串和数值类型 12345&amp;gt;&amp;gt;&amp;gt; print(1)1&amp;gt;&amp;gt;&amp;gt; print(&apos;hello world&apos;)hello world#无论什么类型，数值，布尔，列表，字典..这些变量都可以直接输出 格式化输出，类似于c语言的 print 1234&amp;gt;&amp;gt;&amp;gt; s= &apos;hello&apos;&amp;gt;&amp;gt;&amp;gt; x = len(s)&amp;g">
 <meta name="keywords" content="Python3.x,基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础-输入输出">
 <meta property="og:url" content="HeroicLee.github.io/2018/01/04/Python基础-输入输出/index.html">
 <meta property="og:site_name" content="你好, 旅行者">
-<meta property="og:description" content="什么都帮不了你，除了你自己">
+<meta property="og:description" content="输出 print 函数直接输出字符串和数值类型 12345&amp;gt;&amp;gt;&amp;gt; print(1)1&amp;gt;&amp;gt;&amp;gt; print(&apos;hello world&apos;)hello world#无论什么类型，数值，布尔，列表，字典..这些变量都可以直接输出 格式化输出，类似于c语言的 print 1234&amp;gt;&amp;gt;&amp;gt; s= &apos;hello&apos;&amp;gt;&amp;gt;&amp;gt; x = len(s)&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-04T09:55:01.552Z">
+<meta property="og:updated_time" content="2018-01-04T11:51:43.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础-输入输出">
-<meta name="twitter:description" content="什么都帮不了你，除了你自己">
+<meta name="twitter:description" content="输出 print 函数直接输出字符串和数值类型 12345&amp;gt;&amp;gt;&amp;gt; print(1)1&amp;gt;&amp;gt;&amp;gt; print(&apos;hello world&apos;)hello world#无论什么类型，数值，布尔，列表，字典..这些变量都可以直接输出 格式化输出，类似于c语言的 print 1234&amp;gt;&amp;gt;&amp;gt; s= &apos;hello&apos;&amp;gt;&amp;gt;&amp;gt; x = len(s)&amp;g">
 
 
 
@@ -363,7 +363,82 @@
       
 
       
-        
+        <h3 id="输出-print-函数"><a href="#输出-print-函数" class="headerlink" title="输出 print 函数"></a>输出<font color="#6495ED"> print </font>函数</h3><p>直接输出字符串和数值类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="number">1</span>)</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'hello world'</span>)</span><br><span class="line">hello world</span><br><span class="line"><span class="comment">#无论什么类型，数值，布尔，列表，字典..这些变量都可以直接输出</span></span><br></pre></td></tr></table></figure>
+<p>格式化输出，类似于c语言的<font color="#6495ED"> print </font><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s= <span class="string">'hello'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = len(s)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print( <span class="string">'the length of %s is %d'</span> % ( s, x ) )</span><br><span class="line">The length of Hello <span class="keyword">is</span> <span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="转义输出类型"><a href="#转义输出类型" class="headerlink" title="转义输出类型"></a>转义输出类型</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">转义类型</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">d,i</td>
+<td style="text-align:center">十进制</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:center">八进制</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:center">十进制</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">十六进制(小写)</td>
+</tr>
+<tr>
+<td style="text-align:center">X</td>
+<td style="text-align:center">十六进制(小写)</td>
+</tr>
+<tr>
+<td style="text-align:center">e</td>
+<td style="text-align:center">科学计数法浮点数(小写)</td>
+</tr>
+<tr>
+<td style="text-align:center">E</td>
+<td style="text-align:center">科学计数法浮点数(大写)</td>
+</tr>
+<tr>
+<td style="text-align:center">f,F</td>
+<td style="text-align:center">十进制浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:center">接收整数(会转换为对应ascii码字符)、 单字符)</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:center">字符串</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%d  %i'</span> % (<span class="number">20</span>,<span class="number">-10</span>)) <span class="comment">#d,i</span></span><br><span class="line"><span class="number">20</span>  <span class="number">-10</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%o'</span>%<span class="number">-10</span>) <span class="comment">#o</span></span><br><span class="line"><span class="number">-12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%u'</span> % <span class="number">20</span>) <span class="comment">#u</span></span><br><span class="line"><span class="number">20</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%x'</span>%<span class="number">12</span>) <span class="comment">#x</span></span><br><span class="line">c</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%e'</span>%<span class="number">2.56</span>) <span class="comment">#e</span></span><br><span class="line"><span class="number">2.560000e+00</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%f'</span>%<span class="number">2.56</span>) <span class="comment">#f</span></span><br><span class="line"><span class="number">2.560000</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%c'</span>% <span class="number">65</span>) <span class="comment">#C</span></span><br><span class="line">A</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'%s'</span>% <span class="string">'abc'</span>) <span class="comment">#s</span></span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="输入input"><a href="#输入input" class="headerlink" title="输入input"></a>输入input</h3><ul>
+<li><strong>Python2</strong>：<font color="#6495ED"> raw_input() </font>    <font color="#6495ED"> input() </font><ul>
+<li><font color="#6495ED"> input </font>会默认用户输入的是合法的Python表达式</li>
+<li><font color="#6495ED"> raw_input </font>会把所有的输入当做<strong>原始数据</strong>进行处理</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python2.x raw_input</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var = raw_input(<span class="string">'pls type a num you want:'</span>)</span><br><span class="line">pls type a num you want:<span class="number">20</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var</span><br><span class="line"><span class="string">'20'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var = raw_input(<span class="string">'pls type a num you want:'</span>)</span><br><span class="line">pls type a num you want:abc</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var</span><br><span class="line"><span class="string">'abc'</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python2.x input</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var = input(<span class="string">'pls type a num you want:'</span>)</span><br><span class="line">pls type a num you want:<span class="number">20</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var</span><br><span class="line"><span class="number">20</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var = input(<span class="string">'pls type a num you want:'</span>)</span><br><span class="line">pls type a num you want:abc</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">  File <span class="string">"&lt;string&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">NameError: name <span class="string">'abc'</span> <span class="keyword">is</span> <span class="keyword">not</span> defined</span><br><span class="line"><span class="comment">#2中的input函数会严格检查输入的类型，abc此时没有指明字符串类型，被当成了变量名，所以引发了 NameError</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var = input(<span class="string">'pls type a num you want:'</span>)</span><br><span class="line">pls type a num you want:<span class="string">'abc'</span> <span class="comment">#改变输入值的类型</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var</span><br><span class="line"><span class="string">'abc'</span></span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li><strong>Python3</strong>：<font color="#6495ED"> input() </font><ul>
+<li><font color="#6495ED">input </font>会把所有的输入当做原始数据进行处理</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python3.x</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var = input(<span class="string">'pls type a num you want:'</span>)</span><br><span class="line">pls type a num you want:<span class="number">20</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var</span><br><span class="line"><span class="string">'20'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var = input(<span class="string">'pls type a num you want:'</span>)</span><br><span class="line">pls type a num you want:abc</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>var</span><br><span class="line"><span class="string">'abc'</span></span><br><span class="line"><span class="comment">#input保存的均为字符串类型</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>转载请注明原文地址</p>
+
       
     </div>
     
@@ -455,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -516,6 +600,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#输出-print-函数"><span class="nav-number">1.</span> <span class="nav-text">输出 print 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#转义输出类型"><span class="nav-number">1.1.</span> <span class="nav-text">转义输出类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入input"><span class="nav-number">2.</span> <span class="nav-text">输入input</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
