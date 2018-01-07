@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="你好, 旅行者">
 <meta property="og:description" content="字典 字典以键值对形式存在：{ key: value} 其中key值会进行hash运算，生成hash表，所以字典的访问效率要优于普通序列数据类型(列表，元组) key值由于需要通过hash，则一些可变数据类型不可以做key值，而value的类型没有限制，可以是任意数据类型 由于进行了hash运算，那么在内存中字典其中的数据元素是无序的，没有办法进行一些像索引和切片一样的操作 字典中的key值是唯一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-07T16:31:37.657Z">
+<meta property="og:updated_time" content="2018-01-07T16:36:36.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础-字典集合数据类型">
 <meta name="twitter:description" content="字典 字典以键值对形式存在：{ key: value} 其中key值会进行hash运算，生成hash表，所以字典的访问效率要优于普通序列数据类型(列表，元组) key值由于需要通过hash，则一些可变数据类型不可以做key值，而value的类型没有限制，可以是任意数据类型 由于进行了hash运算，那么在内存中字典其中的数据元素是无序的，没有办法进行一些像索引和切片一样的操作 字典中的key值是唯一">
@@ -365,7 +365,7 @@
       
         <h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><ul>
 <li>字典以键值对形式存在：{<font color="#6495ED"> key</font>: <font color="#6495ED">value</font>}</li>
-<li>其中key值会进行<font color="#6495ED">hash</font>运算，生成<font color="#6495ED">hash</font>表，所以字典的<strong>访问效率</strong>要<strong>优于</strong>普通序列数据类型(列表，元组)</li>
+<li>其中<font color="#6495ED">key</font>值会进行<font color="#6495ED">hash</font>运算，生成<font color="#6495ED">hash</font>表，所以字典的<strong>访问效率</strong>要<strong>优于</strong>普通序列数据类型(列表，元组)</li>
 <li><font color="#6495ED">key</font>值由于需要通过<font color="#6495ED">hash</font>，则一些<strong>可变数据类型不可以</strong>做<font color="#6495ED">key</font>值，而<font color="#6495ED">value</font>的类型没有限制，可以是任意数据类型</li>
 <li>由于进行了<font color="#6495ED">hash</font>运算，那么在内存中字典其中的数据元素是<strong>无序</strong>的，没有办法进行一些像<strong>索引</strong>和<strong>切片</strong>一样的操作</li>
 <li>字典中的<font color="#6495ED">key</font>值是<strong>唯一</strong>的</li>
@@ -480,12 +480,11 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset = frozenset(<span class="string">'abc'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset</span><br><span class="line">frozenset(&#123;<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>&#125;)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset.add()</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">AttributeError: <span class="string">'frozenset'</span> object has no attribute <span class="string">'add'</span></span><br><span class="line"><span class="comment">#不可变集合不支持add更新</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset.update()</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">AttributeError: <span class="string">'frozenset'</span> object has no attribute <span class="string">'update'</span></span><br><span class="line"><span class="comment">#不可变集合不支持update更新</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h4 id="删除集合中的元素"><a href="#删除集合中的元素" class="headerlink" title="删除集合中的元素"></a>删除集合中的元素</h4><ul>
-<li><font color="#6495ED">s.remove(obj)</font>：删除<font color="#6495ED">obj</font>元素从集合<font color="#6495ED">s</font>中<ul>
-<li>该函数在删除一个<strong>不存在的数据</strong>时会引发<font color="#FF4500">KeyError</font><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset.remove(<span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset.remove(<span class="number">5</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">KeyError: <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<li><font color="#6495ED">s.remove(obj)</font>：删除<font color="#6495ED">obj</font>元素从集合<font color="#6495ED">s</font>中<br>  - 该函数在删除一个<strong>不存在的数据</strong>时会引发<font color="#FF4500">KeyError</font>
+
 </li>
 </ul>
-</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset.remove(<span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset</span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>myset.remove(<span class="number">5</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">KeyError: <span class="number">5</span></span><br></pre></td></tr></table></figure>
 <hr>
 <ul>
 <li><font color="#6495ED">s.discard(obj)</font> ：如果<font color="#6495ED">obj</font>是集合<font color="#6495ED">s</font>中的元素，从集合<font color="#6495ED">s</font>中删除对象<font color="#6495ED">obj</font><ul>
@@ -598,10 +597,6 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/07/Python基础-常用内建函数/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
       
@@ -677,7 +672,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
