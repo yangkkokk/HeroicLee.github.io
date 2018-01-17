@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python3.x,基础," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="基础数据类型 数字整数(int,long)：整数在3版本没有大小长度分别，内存决定整数最大长度浮点数(float)：具有小数点的数，无穷小数会做精度处理布尔(bool)：非空非0为真，0或空为假复数(complex)：复数的标志为虚部以大写 “J” 或小写 “j” 结尾 1234&amp;gt;&amp;gt;&amp;gt; a = 1 #int&amp;gt;&amp;gt;&amp;gt; a = 1.5 #float&amp;gt;&amp;gt;&amp;g">
+<meta name="keywords" content="Python3.x,基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础-简单数据类型">
+<meta property="og:url" content="https://heroiclee.github.io/2018/01/03/Python基础-简单数据类型/index.html">
+<meta property="og:site_name" content="老渔夫的博客">
+<meta property="og:description" content="基础数据类型 数字整数(int,long)：整数在3版本没有大小长度分别，内存决定整数最大长度浮点数(float)：具有小数点的数，无穷小数会做精度处理布尔(bool)：非空非0为真，0或空为假复数(complex)：复数的标志为虚部以大写 “J” 或小写 “j” 结尾 1234&amp;gt;&amp;gt;&amp;gt; a = 1 #int&amp;gt;&amp;gt;&amp;gt; a = 1.5 #float&amp;gt;&amp;gt;&amp;g">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-17T09:43:06.922Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础-简单数据类型">
+<meta name="twitter:description" content="基础数据类型 数字整数(int,long)：整数在3版本没有大小长度分别，内存决定整数最大长度浮点数(float)：具有小数点的数，无穷小数会做精度处理布尔(bool)：非空非0为真，0或空为假复数(complex)：复数的标志为虚部以大写 “J” 或小写 “j” 结尾 1234&amp;gt;&amp;gt;&amp;gt; a = 1 #int&amp;gt;&amp;gt;&amp;gt; a = 1.5 #float&amp;gt;&amp;gt;&amp;g">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://heroiclee.github.io/2018/01/03/Python基础-简单数据类型/"/>
+
+
+
+
+
+  <title>Python基础-简单数据类型 | 老渔夫的博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?56b0d941d0f01534c716ffa7d8261de3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">老渔夫的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">我的QQ,295878828.是不是8挺多的</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://heroiclee.github.io/2018/01/03/Python基础-简单数据类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="年轻渔夫">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="老渔夫的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python基础-简单数据类型</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-03T17:47:43+08:00">
+                2018-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python语法基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Python语法基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/01/03/Python基础-简单数据类型/" class="leancloud_visitors" data-flag-title="Python基础-简单数据类型">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h2><hr>
+<h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p><strong>整数</strong>(<font color="#6495ED">int</font>,<font color="#6495ED">long</font>)：整数在3版本没有大小长度分别，内存决定整数最大长度<br><strong>浮点数</strong>(<font color="#6495ED">float</font>)：具有小数点的数，无穷小数会做精度处理<br><strong>布尔</strong>(<font color="#6495ED">bool</font>)：非空非0为真，0或空为假<br><strong>复数</strong>(<font color="#6495ED">complex</font>)：复数的标志为虚部以大写 “J” 或小写 “j” 结尾</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span> <span class="comment">#int</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1.5</span> <span class="comment">#float</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="keyword">True</span> <span class="comment">#bool</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">2</span>+<span class="number">3j</span> <span class="comment">#complex</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="字符串-str-："><a href="#字符串-str-：" class="headerlink" title="字符串(str)："></a>字符串(<font color="#6495ED">str</font>)：</h3><ul>
+<li>表示方式：使用单引号<font color="#6495ED"> ‘abc’  </font>; 双引号 <font color="#6495ED">“abc”</font> ; 或者这样<font color="#6495ED"> ‘’’abc’’’</font> ,<font color="#6495ED"> “””abc”””</font>，单个字符也称作字符串</li>
+<li>索引：<font color="#6495ED">str[<font color="#FF4500">index</font>] </font>使用index选择访问位置，索引从左向右，从0开始，从右向左，从-1开始<pre><code>&lt;font color=#FF4500&gt;index&lt;/font&gt;也是我们经常称呼的下标，下标值不可大于等于字符串最大长度
+</code></pre></li>
+<li>切片：<font color="#6495ED">str[start:stop:[step…]] </font>，切片可以获取字符串上一定区间中的值</li>
+<li>字符串其中的内容不可变，<strong>字符串</strong>为<strong>不可变数据对象</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr = <span class="string">''</span> <span class="comment">#创建空字符串</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr = <span class="string">"a"</span> <span class="comment">#单个字符同样为字符串</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr = <span class="string">'abcdefg'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[<span class="number">0</span>] <span class="comment">#索引值为正时，顺序从左向右取对应位置数据</span></span><br><span class="line"><span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[<span class="number">-1</span>] <span class="comment">#索引值为负时，顺序从右边向左取对应位置数据</span></span><br><span class="line"><span class="string">'g'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[:] <span class="comment">#未给出开始，结束索引；选择整个列表范围内的值</span></span><br><span class="line"><span class="string">'abcdefg'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[:<span class="number">2</span>] <span class="comment">#切片选择0-2范围内的值，不包含索引为2的值</span></span><br><span class="line"><span class="string">'ab'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[<span class="number">-3</span>:] <span class="comment">#切片选择从-3到最后位置的值</span></span><br><span class="line"><span class="string">'efg'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>] <span class="comment">#切片选择取索引0-4范围内的值(不包含索引4)，并且步长为2</span></span><br><span class="line"><span class="string">'ac'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[::<span class="number">-1</span>] <span class="comment">#切片选择整个索引范围内的值，步长为负值时，为逆序</span></span><br><span class="line"><span class="string">'gfedcba'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mystr[<span class="number">0</span>] = <span class="number">1</span> <span class="comment">#当对字符串数据对象进行值修改，报错</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'str'</span> object does <span class="keyword">not</span> support item assignment</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="列表-list-："><a href="#列表-list-：" class="headerlink" title="列表(list)："></a>列表(<font color="#6495ED">list</font>)：</h3><ul>
+<li>列表(<font color="#6495ED">list</font>)是使用最频繁的数据之一</li>
+<li>表示方式：使用中括号，逗号分隔每个数据元素：<font color="#6495ED">[ ‘a’, ‘b’ , ‘c’ ]</font></li>
+<li>列表同样可以支持<strong>索引</strong>和<strong>切片</strong>操作</li>
+<li><strong>列表</strong>为<strong>可变数据对象</strong>，列表中的数据可以被修改</li>
+<li>可以创建一个空列表，或者只有一个元素的列表<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist = [] <span class="comment">#创建空列表</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[<span class="number">0</span>] <span class="comment">#索引值为正时，顺序从左向右取对应位置数据</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[<span class="number">-1</span>] <span class="comment">#索引值为负时，顺序从右边向左取对应位置数据</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[:] <span class="comment">#未给出开始，结束索引；选择整个列表范围内的值</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[:<span class="number">2</span>] <span class="comment">#切片选择0-2范围内的值，不包含索引为2的值</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[<span class="number">-3</span>:] <span class="comment">#切片选择从-3到最后位置的值</span></span><br><span class="line">[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>] <span class="comment">#切片选择取索引0-4范围内的值(不包含索引4)，并且步长为2</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[::<span class="number">-1</span>] <span class="comment">#切片选择整个索引范围内的值，步长为负值时，为逆序</span></span><br><span class="line">[<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist[<span class="number">0</span>] = <span class="string">'a'</span> <span class="comment">#修改列表第一个位置上的值为字母'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist</span><br><span class="line">[<span class="string">'a'</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]<span class="comment">#列表为可变数据对象</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="元组-tuple-："><a href="#元组-tuple-：" class="headerlink" title="元组(tuple)："></a>元组(<font color="#6495ED">tuple</font>)：</h3><ul>
+<li>元组和列表类似，不同之处在于元组内数据不可以被修改</li>
+<li>表示方式：使用小括号，逗号分隔每个数据元素：<font color="#6495ED">( ‘a’, ‘b’, ‘c’ )</font></li>
+<li>元组同样索引和切片操作</li>
+<li>元组中的数据不可以被修改，<strong>元组</strong>为<strong>不可变数据对象</strong></li>
+<li>单纯的创建一个只含有一个元素的元组是会被解释器认为是一个实际数据对象，并不解释成元组</li>
+<li>创建只含有一个元素的元组：<font color="#6495ED">(1,)</font></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple = (<span class="number">1</span>,) <span class="comment">#正确方式创建只含有一个数据的元组</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple</span><br><span class="line">(<span class="number">1</span>,)<span class="comment">#返回值为元组</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple = (<span class="number">1</span>) <span class="comment">#错误方式创建只含有一个数据的元组</span></span><br><span class="line"><span class="number">1</span><span class="comment">#返回值为整型</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[<span class="number">0</span>]</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[<span class="number">-1</span>] <span class="comment">#索引值为负时，顺序从右边向左取对应位置数据</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[:] <span class="comment">#未给出开始，结束索引；选择整个列表范围内的值</span></span><br><span class="line">(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[:<span class="number">2</span>] <span class="comment">#切片选择0-2范围内的值，不包含索引为2的值</span></span><br><span class="line">(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[<span class="number">-3</span>:] <span class="comment">#切片选择从-3到最后位置的值</span></span><br><span class="line">(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[<span class="number">0</span>:<span class="number">4</span>:<span class="number">2</span>] <span class="comment">#切片选择取索引0-4范围内的值(不包含索引4)，并且步长为2</span></span><br><span class="line">(<span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[::<span class="number">-1</span>] <span class="comment">#切片选择整个索引范围内的值，步长为负值时，为逆序</span></span><br><span class="line">(<span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>mytuple[<span class="number">0</span>] = <span class="string">'a'</span> <span class="comment">#当对元组数据对象进行值修改，报错</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">TypeError: <span class="string">'tuple'</span> object does <span class="keyword">not</span> support item assignment</span><br></pre></td></tr></table></figure>
+<hr>
+<p>转载请注明原文地址</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    年轻渔夫
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://heroiclee.github.io/2018/01/03/Python基础-简单数据类型/" title="Python基础-简单数据类型">https://heroiclee.github.io/2018/01/03/Python基础-简单数据类型/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python3-x/" rel="tag"># Python3.x</a>
+          
+            <a href="/tags/基础/" rel="tag"># 基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/02/Python3使用smtplib & email 模块发送定制邮件/" rel="next" title="Python3使用smtplib & email 模块发送定制邮件">
+                <i class="fa fa-chevron-left"></i> Python3使用smtplib & email 模块发送定制邮件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/03/Python基础-变量本质/" rel="prev" title="Python基础-变量本质">
+                Python基础-变量本质 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">年轻渔夫</p>
+              <p class="site-description motion-element" itemprop="description">什么都帮不了你,但是除了你自己还有我</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情连接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.binblogs.cn" title="小青年" target="_blank">小青年</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础数据类型"><span class="nav-number">1.</span> <span class="nav-text">基础数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数字"><span class="nav-number">1.1.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串-str-："><span class="nav-number">1.2.</span> <span class="nav-text">字符串(str)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表-list-："><span class="nav-number">1.3.</span> <span class="nav-text">列表(list)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元组-tuple-："><span class="nav-number">1.4.</span> <span class="nav-text">元组(tuple)：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">年轻渔夫</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("dik0vxWlNgMKwo5lYIDvQOUL-gzGzoHsz", "OGcwDlp3XSFeyebGIjBBnmaI");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
