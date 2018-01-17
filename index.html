@@ -366,9 +366,7 @@
       
         
           
-          基础数据类型
-数字整数(int,long)：整数在3版本没有大小长度分别，内存决定整数最大长度浮点数(float)：具有小数点的数，无穷小数会做精度处理布尔(bool)：非空非0为真，0或空为假复数(complex)：复数的标志为虚部以大写 “J” 或小写 “j” 结尾
-1234&gt;&gt;&g
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -527,14 +525,7 @@
       
         
           
-          Python变量本质
-
-变量不需先定义在使用，我们可以直接给变量名赋值，直接使用1&gt;&gt;&gt; a = 1 #这里我们可以直接给a变量赋值为1，并没有提前对a进行声明
-
-
-
-
-变量可以重复存储不同种数据类型12&gt;&gt;&gt; a = 1&gt;&gt;&gt; a = 'abc
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -693,15 +684,7 @@
       
         
           
-          运算表达式
-算数表达式
-
-基本运算符：+  -   *  / 
-Python2.x : 除法结果只会向复杂数据类型靠拢，两个整数相除，是否除净结果都为整数。
-Python3.x : 除法中无论有无复杂数据类型，结果都将精确到浮点数
-其他算数的结果类型取决于运算数字之中最复杂的类型
-
-12345#py
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -860,9 +843,7 @@ Python3.x : 除法中无论有无复杂数据类型，结果都将精确到浮�
       
         
           
-          条件分支及循环语句
-if条件语句语法格式：1234567if   条件语句:	执行代码elif 条件语句:	执行代码else:	执行代码#当条件成立则执行对应的代码，条件判断只会进入一个
-小例子：1234567891011&gt;&gt;&gt; a = 1&gt;&gt;&gt; b = 2&gt
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1021,11 +1002,7 @@ if条件语句语法格式：1234567if   条件语句:	执行代码elif 条件�
       
         
           
-          range内建函数在Python中range函数属于内建函数（不需要从三方模块导入），可以更方便的生产一个范围内的数据
-语法格式：
-1234#python3.x&gt;&gt;&gt; var = range(10)&gt;&gt;&gt; varrange(0, 10)
-
-在Python2版本中，
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1184,9 +1161,7 @@ if条件语句语法格式：1234567if   条件语句:	执行代码elif 条件�
       
         
           
-          输出 print 函数直接输出字符串和数值类型
-12345&gt;&gt;&gt; print(1)1&gt;&gt;&gt; print('hello world')hello world#无论什么类型，数值，布尔，列表，字典..这些变量都可以直接输出
-格式化输出，类似于c语言的 print 12
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1345,8 +1320,7 @@ if条件语句语法格式：1234567if   条件语句:	执行代码elif 条件�
       
         
           
-          深浅拷贝在Python中，面对列表这种可变数据类型，在赋值的过程中，需要我们注意这么一个地方：
-12345678&gt;&gt;&gt; mylist = [1,2,3,4]&gt;&gt;&gt; mylist1 = mylist&gt;&gt;&gt; mylist[0] = 'a'&gt;&g
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1505,11 +1479,7 @@ if条件语句语法格式：1234567if   条件语句:	执行代码elif 条件�
       
         
           
-          字典
-字典以键值对形式存在：{ key: value }
-其中key值会进行hash运算，生成hash表，所以字典的访问效率要优于普通序列数据类型(列表，元组)
-key值由于需要通过hash，则一些可变数据类型不可以做key值，而value的类型没有限制，可以是任意数据类型
-由于进行了hash运算，
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1668,11 +1638,7 @@ key值由于需要通过hash，则一些可变数据类型不可以做key值，�
       
         
           
-          字符串内建函数在字符串类型中，还包含一些其他方便我们处理数据的内建函数，注意：某些函数可能返回结果与原字符串不同，但并不是修改了本身字符串，只是返回了一个新的而已
-大小写转换函数
-string.lower()：字母大写转换为小写
-
-123&gt;&gt;&gt; mystr = 'aBc,bDc'&
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1831,25 +1797,7 @@ string.lower()：字母大写转换为小写
       
         
           
-          文件操作
-打开文件
-读写文件
-
-
-打开文件
-fp = open(path,mode=’r’)：该函数可以路径为Path的文件，默认以读权限打开，并返回一个打开文件对象
-
-
-打开权限
-r：读
-w：写
-a：追加
-
-
-单纯使用这三种方式打开文件，只拥有一种打开权限，要么读，要么写
-
-
-如果希望在打开文件的
+          
           ...
           <!--noindex-->
           <div class="post-button text-center">
