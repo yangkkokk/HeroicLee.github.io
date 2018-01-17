@@ -6,6 +6,3 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-
-Sitemap: http://lancelot_lewis.coding.me/sitemap.xml
-Sitemap: http://lancelot_lewis.coding.me/baidusitemap.xml
