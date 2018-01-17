@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python3.x,基础," />
+  <meta name="keywords" content="Python3.x,smtplib,邮件,运维," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Python变量本质  变量不需先定义在使用，我们可以直接给变量名赋值，直接使用1&amp;gt;&amp;gt;&amp;gt; a = 1 #这里我们可以直接给a变量赋值为1，并没有提前对a进行声明     变量可以重复存储不同种数据类型12&amp;gt;&amp;gt;&amp;gt; a = 1&amp;gt;&amp;gt;&amp;gt; a = &apos;abc&apos; #对a重复复制并不会导致报错     可以同时为多个变量赋值12345&amp;gt;&amp;gt;&amp;gt;">
-<meta name="keywords" content="Python3.x,基础">
+<meta name="description" content="smtplib模块smtplib为Python在3.x版本中标准库的内容, 我们不需要额外安装;使用该模块, 可以让我们更加轻松的实现模拟邮件客户端发送邮件等功能;  smtplib常用方法首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象12import smtplibc_smtp = smtplib.SMTP()#创建SMTP对象  使用实例函数connect与远程">
+<meta name="keywords" content="Python3.x,smtplib,邮件,运维">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python基础-变量本质">
-<meta property="og:url" content="https://heroiclee.github.io/2018/01/03/Python基础-变量本质/index.html">
+<meta property="og:title" content="Python3使用smtplib模块发送简单邮件">
+<meta property="og:url" content="https://heroiclee.github.io/title.html">
 <meta property="og:site_name" content="老渔夫的博客">
-<meta property="og:description" content="Python变量本质  变量不需先定义在使用，我们可以直接给变量名赋值，直接使用1&amp;gt;&amp;gt;&amp;gt; a = 1 #这里我们可以直接给a变量赋值为1，并没有提前对a进行声明     变量可以重复存储不同种数据类型12&amp;gt;&amp;gt;&amp;gt; a = 1&amp;gt;&amp;gt;&amp;gt; a = &apos;abc&apos; #对a重复复制并不会导致报错     可以同时为多个变量赋值12345&amp;gt;&amp;gt;&amp;gt;">
+<meta property="og:description" content="smtplib模块smtplib为Python在3.x版本中标准库的内容, 我们不需要额外安装;使用该模块, 可以让我们更加轻松的实现模拟邮件客户端发送邮件等功能;  smtplib常用方法首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象12import smtplibc_smtp = smtplib.SMTP()#创建SMTP对象  使用实例函数connect与远程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-17T09:37:48.397Z">
+<meta property="og:updated_time" content="2018-01-17T09:21:32.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python基础-变量本质">
-<meta name="twitter:description" content="Python变量本质  变量不需先定义在使用，我们可以直接给变量名赋值，直接使用1&amp;gt;&amp;gt;&amp;gt; a = 1 #这里我们可以直接给a变量赋值为1，并没有提前对a进行声明     变量可以重复存储不同种数据类型12&amp;gt;&amp;gt;&amp;gt; a = 1&amp;gt;&amp;gt;&amp;gt; a = &apos;abc&apos; #对a重复复制并不会导致报错     可以同时为多个变量赋值12345&amp;gt;&amp;gt;&amp;gt;">
+<meta name="twitter:title" content="Python3使用smtplib模块发送简单邮件">
+<meta name="twitter:description" content="smtplib模块smtplib为Python在3.x版本中标准库的内容, 我们不需要额外安装;使用该模块, 可以让我们更加轻松的实现模拟邮件客户端发送邮件等功能;  smtplib常用方法首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象12import smtplibc_smtp = smtplib.SMTP()#创建SMTP对象  使用实例函数connect与远程">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://heroiclee.github.io/2018/01/03/Python基础-变量本质/"/>
+  <link rel="canonical" href="https://heroiclee.github.io/title.html"/>
 
 
 
 
 
-  <title>Python基础-变量本质 | 老渔夫的博客</title>
+  <title>Python3使用smtplib模块发送简单邮件 | 老渔夫的博客</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://heroiclee.github.io/2018/01/03/Python基础-变量本质/">
+    <link itemprop="mainEntityOfPage" href="https://heroiclee.github.io/title.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="年轻渔夫">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python基础-变量本质</h1>
+          <h1 class="post-title" itemprop="name headline">Python3使用smtplib模块发送简单邮件</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-03T20:14:38+08:00">
-                2018-01-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-02T11:34:33+08:00">
+                2018-01-02
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python语法基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Python语法基础</span>
+                  <a href="/categories/自动化运维/" itemprop="url" rel="index">
+                    <span itemprop="name">自动化运维</span>
                   </a>
                 </span>
 
@@ -332,7 +332,7 @@
 
           
           
-             <span id="/2018/01/03/Python基础-变量本质/" class="leancloud_visitors" data-flag-title="Python基础-变量本质">
+             <span id="/title.html" class="leancloud_visitors" data-flag-title="Python3使用smtplib模块发送简单邮件">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -363,41 +363,34 @@
       
 
       
-        <h2 id="Python变量本质"><a href="#Python变量本质" class="headerlink" title="Python变量本质"></a>Python变量本质</h2><hr>
+        <h2 id="smtplib模块"><a href="#smtplib模块" class="headerlink" title="smtplib模块"></a>smtplib模块</h2><p>smtplib为Python在3.x版本中标准库的内容, 我们不需要额外安装;<br>使用该模块, 可以让我们更加轻松的实现模拟邮件客户端发送邮件等功能;</p>
+<hr>
+<h2 id="smtplib常用方法"><a href="#smtplib常用方法" class="headerlink" title="smtplib常用方法"></a>smtplib常用方法</h2><p>首先, 我们将使用smtplib.SMTP()类, 初始化一个Smtp实例对象<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line">c_smtp = smtplib.SMTP()<span class="comment">#创建SMTP对象</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>使用实例函数connect与远程邮件服务器进行连接<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connect(self, host=<span class="string">'localhost'</span>, port=<span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<p>参数解释:</p>
 <ul>
-<li>变量不需先定义在使用，我们可以直接给变量名赋值，直接使用<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span> <span class="comment">#这里我们可以直接给a变量赋值为1，并没有提前对a进行声明</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><font color="#6495ED">host </font>: 邮件服务器主机地址, 如常用的163邮箱主机地址: smtp.163.com</li>
+<li><font color="#6495ED">port </font>: 主机端口, 一般的smtp服务端口为25</li>
 </ul>
 <hr>
+<p>使用实例函数login在已连接服务器进行登陆验证:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">login(self, user, password)</span><br></pre></td></tr></table></figure></p>
+<p>参数解释:</p>
 <ul>
-<li>变量可以重复存储不同种数据类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="string">'abc'</span> <span class="comment">#对a重复复制并不会导致报错</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><font color="#6495ED">user </font>: 邮件服务器用户名</li>
+<li><font color="#6495ED">password </font>: 这里的password为邮件服务器提供的三方邮件客户端的专用密码, 以163为例: 该密码在设置选项中的客户端授权密码可以查看到</li>
 </ul>
 <hr>
+<p>使用实例函数sendmail在已连接服务器进行登陆验证:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sendmail(self, from_addr, to_addrs, msg, mail_options=[], rcpt_options=[])</span><br></pre></td></tr></table></figure></p>
+<p>参数解释:</p>
 <ul>
-<li>可以同时为多个变量赋值<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a, b = <span class="number">1</span>, <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b</span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><font color="#6495ED">from_addr </font>: 发件人</li>
+<li><font color="#6495ED">to_addrs </font>: 收件人</li>
+<li><font color="#6495ED">msg </font>: 邮件内容</li>
 </ul>
 <hr>
-<ul>
-<li>变量名遵循C语言风格，变量名可以由字母、数字、下划线组成，数字不可以打头，大小写敏感<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a1 = <span class="number">1</span> <span class="comment">#Success</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>_a = <span class="number">1</span> <span class="comment">#Success</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span>a = <span class="number">1</span> <span class="comment">#Error</span></span><br><span class="line">File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span></span><br><span class="line">   <span class="number">1</span>a = <span class="number">1</span></span><br><span class="line">    ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>不支持自增、自减<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>++a <span class="comment">#这里的++a并不会报错，是因为+号被解释成了正号，正的正一等于1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line"><span class="number">1</span> <span class="comment">#结果同样可以看出a并没有实现自增</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>--a <span class="comment">#与++a同理，此时为负的负一</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a++ <span class="comment">#后++报错</span></span><br><span class="line">File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span></span><br><span class="line">    a++</span><br><span class="line">      ^</span><br><span class="line">SyntaxError: invalid syntax</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a--</span><br><span class="line">File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span></span><br><span class="line">    a --</span><br><span class="line">       ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="变量引用计数"><a href="#变量引用计数" class="headerlink" title="变量引用计数"></a>变量引用计数</h2><ul>
-<li>Python中，相同数据的赋值，会共享同一片空间地址，并非占用一个新的地址单元</li>
-<li>为了记录当前使用这个地址的变量有多少，引出了<strong>引用计数</strong>这个概念</li>
-<li>我们可以使用<font color="#6495ED">del</font>语句对一个数据的引用计数进行减1的操作</li>
-<li>当引用计数最后为0时，这个数据占用的内存地址最终释放</li>
-<li>我们可以使用sys模块下的<font color="#6495ED">getrefcount(<font color="#FF4500">value</font>)</font>函数进行变量<font color="#FF4500">value</font>引用计数的查看</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a) <span class="comment">#可以使用id函数查看当前变量值所处内存单元</span></span><br><span class="line"><span class="number">1951315008</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = a</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(b)</span><br><span class="line"><span class="number">1951315008</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> sys</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sys.getrefcount(a)</span><br><span class="line"><span class="number">127</span> <span class="comment">#当前有127个变量使用1这个值</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sys.getrefcount(b) <span class="comment">#可以看到两个变量的引用计数相同</span></span><br><span class="line"><span class="number">127</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> b <span class="comment">#删除掉b</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sys.getrefcount(a)</span><br><span class="line"><span class="number">126</span> <span class="comment">#1的引用计数减少为126</span></span><br></pre></td></tr></table></figure>
-<p>这样做的好处在于可以节约内存，防止产生多余的内存碎片</p>
+<p>发送信件的简单代码:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"></span><br><span class="line">host = <span class="string">'smtp.163.com'</span><span class="comment">#邮件服务器主机地址</span></span><br><span class="line">port = <span class="string">'25'</span><span class="comment">#主机端口</span></span><br><span class="line"></span><br><span class="line">user = <span class="string">'example@163.com'</span><span class="comment">#邮件服务器用户名</span></span><br><span class="line">password = <span class="string">'passwd'</span><span class="comment">#邮件服务器客户端授权密码</span></span><br><span class="line"></span><br><span class="line">from_addr = <span class="string">'example@163.com'</span><span class="comment">#发件人</span></span><br><span class="line">to_addrs = [<span class="string">'to@qq.com'</span>]<span class="comment">#收件人</span></span><br><span class="line"><span class="comment">#收件人: 值为列表,如果有多个收件人可以添加到该列表</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">msg = <span class="string">'\r\n'</span>.join([<span class="string">"From: %s"</span> % from_addr,</span><br><span class="line">                  <span class="string">"To: %s"</span> % to_addrs,</span><br><span class="line">                  <span class="string">"Subject: %s"</span> % <span class="string">'这是一封测试邮件'</span>,</span><br><span class="line">                  <span class="string">'\r\n你好,世界'</span>]</span><br><span class="line">                  ).encode()</span><br><span class="line"><span class="comment">#组装需要发送信件的字符串并编码</span></span><br><span class="line"></span><br><span class="line">s = smtplib.SMTP()</span><br><span class="line">s.connect(host, port)</span><br><span class="line">s.login(user, password)</span><br><span class="line">s.sendmail(from_addr, to_addrs, msg)</span><br><span class="line"><span class="comment">#组装需要发送信件的字符串并编码</span></span><br><span class="line"></span><br><span class="line">s = smtplib.SMTP()<span class="comment">#创建SMTP对象</span></span><br><span class="line">s.connect(host, port)<span class="comment">#连接SMTP服务器</span></span><br><span class="line">s.login(user, password)<span class="comment">#登陆服务器</span></span><br><span class="line">s.sendmail(from_addr, to_addrs, msg)<span class="comment">#发送信件</span></span><br></pre></td></tr></table></figure></p>
+<p>这里需要注意的是, 邮件字符串msg在拼接时, 需要from_addr为真实邮箱用户, 一般与登陆邮箱用户名相同, 祝君好运~</p>
 <hr>
 <p>转载请注明原文地址</p>
 
@@ -420,7 +413,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://heroiclee.github.io/2018/01/03/Python基础-变量本质/" title="Python基础-变量本质">https://heroiclee.github.io/2018/01/03/Python基础-变量本质/</a>
+    <a href="https://heroiclee.github.io/title.html" title="Python3使用smtplib模块发送简单邮件">https://heroiclee.github.io/title.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -437,7 +430,11 @@
           
             <a href="/tags/Python3-x/" rel="tag"># Python3.x</a>
           
-            <a href="/tags/基础/" rel="tag"># 基础</a>
+            <a href="/tags/smtplib/" rel="tag"># smtplib</a>
+          
+            <a href="/tags/邮件/" rel="tag"># 邮件</a>
+          
+            <a href="/tags/运维/" rel="tag"># 运维</a>
           
         </div>
       
@@ -450,18 +447,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/03/Python基础-简单数据类型/" rel="next" title="Python基础-简单数据类型">
-                <i class="fa fa-chevron-left"></i> Python基础-简单数据类型
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/03/Python基础-运算表达式/" rel="prev" title="Python基础-运算表达式">
-                Python基础-运算表达式 <i class="fa fa-chevron-right"></i>
+              <a href="/title.html" rel="prev" title="Python3使用smtplib & email 模块发送定制邮件">
+                Python3使用smtplib & email 模块发送定制邮件 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -608,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python变量本质"><span class="nav-number">1.</span> <span class="nav-text">Python变量本质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量引用计数"><span class="nav-number">2.</span> <span class="nav-text">变量引用计数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#smtplib模块"><span class="nav-number">1.</span> <span class="nav-text">smtplib模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#smtplib常用方法"><span class="nav-number">2.</span> <span class="nav-text">smtplib常用方法</span></a></li></ol></div>
             
 
           </div>
@@ -920,5 +913,6 @@
 
   
 
+  <script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>
